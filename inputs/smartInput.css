@@ -1,0 +1,29 @@
+.otp-field-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.otp-field-input {
+    width: 38px;
+    height: 45px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    /* Gris suave */
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.otp-field-input:hover {
+    border-color: #94a3b8;
+}
+
+.otp-field-input:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+}
