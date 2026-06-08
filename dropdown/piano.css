@@ -29,17 +29,14 @@
     margin: 0;
     list-style: none;
     perspective: 1000px;
-    /* Para que la caída se vea 3D */
 }
 
-/* Teclas comunes */
 .key {
     position: relative;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transition-delay: calc(var(--i) * 0.05s);
     transform-origin: top;
     transform: rotateX(-90deg);
-    /* Escondidas hacia atrás */
     opacity: 0;
     display: flex;
     align-items: flex-end;
@@ -48,7 +45,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Teclas Blancas */
 .key.white {
     width: 45px;
     height: 160px;
@@ -57,7 +53,6 @@
     z-index: 1;
 }
 
-/* Teclas Negras: El secreto está en los márgenes negativos */
 .key.black {
     width: 30px;
     height: 100px;
@@ -75,17 +70,14 @@
     pointer-events: none;
 }
 
-/* Animación al activar el checkbox */
 .piano-gate:checked~.piano-keys .key {
     opacity: 1;
     transform: rotateX(0deg);
 }
 
-/* Efecto al pasar el mouse por cada tecla (Efecto de presión) */
 .key:hover {
     filter: brightness(0.9);
     height: 165px;
-    /* Se estira un poco al "tocarla" */
 }
 
 .key.black:hover {
