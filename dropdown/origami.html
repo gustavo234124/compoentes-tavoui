@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="origami.css">
+</head>
+
+<body>
+    <div class="tavo-origami-dropdown">
+        <input type="checkbox" id="origami-toggle" class="origami-gate">
+
+        <label for="origami-toggle" class="origami-btn">
+            <span>ORIGAMI MENU</span>
+            <span class="origami-arrow">▼</span>
+        </label>
+
+        <ul class="origami-menu">
+            <li style="--i: 1">
+                <a href="#dashboard" class="origami-item">Dashboard</a>
+
+                <ul class="origami-sub">
+                    <li style="--i: 2">
+                        <a href="#analytics" class="origami-item">Analytics</a>
+
+                        <ul class="origami-sub">
+                            <li style="--i: 3">
+                                <a href="#settings" class="origami-item">Settings</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
