@@ -1,0 +1,140 @@
+.tavo-origami-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: system-ui, -apple-system, sans-serif;
+    perspective: 1200px;
+}
+
+.origami-gate {
+    display: none;
+}
+
+.origami-arrow {
+    font-size: 10px;
+    transition: transform 0.4s ease;
+}
+
+.origami-menu,
+.origami-sub {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    transform-style: preserve-3d;
+}
+
+.origami-sub {
+    top: 100%;
+}
+
+
+.origami-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    padding: 14px 20px;
+    background: #fdfaf7;
+    background-image: linear-gradient(90deg, rgba(200, 190, 180, 0.05) 1px, transparent 1px);
+    background-size: 20px 100%;
+    color: #4a4a4a;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    border-radius: 4px 4px 0 0;
+
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0d8d0;
+}
+
+.origami-item {
+    display: block;
+    padding: 12px 20px;
+    background: #f4efeb;
+    background-image:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 50%, rgba(0, 0, 0, 0.02) 100%),
+        linear-gradient(45deg, transparent 45%, rgba(0, 0, 0, 0.03) 50%, transparent 55%);
+
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid #e5ddd5;
+    border-left: 3px solid #6f2a0c;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.origami-item:hover {
+    background-color: #fcf9f7;
+    filter: brightness(1.02);
+    padding-left: 25px;
+}
+
+
+.origami-menu li {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.1), opacity 0.3s ease;
+}
+
+.origami-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.origami-item:hover {
+    background: #f8f9fa;
+}
+
+.origami-gate:checked~.origami-btn .origami-arrow {
+    transform: rotate(180deg);
+}
+
+.origami-gate:checked~.origami-menu,
+.origami-gate:checked~.origami-menu .origami-sub {
+    pointer-events: auto;
+}
+
+.origami-gate:checked~.origami-menu>li,
+.origami-gate:checked~.origami-menu li:checked~.origami-sub>li,
+.origami-gate:checked~.origami-menu li .origami-sub>li {
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
+.origami-gate:checked~.origami-menu .origami-item::before {
+    opacity: 0;
+}
+
+.origami-gate:checked~.origami-menu>li {
+    transition-delay: 0s;
+}
+
+.origami-gate:checked~.origami-menu>li>.origami-sub>li {
+    transition-delay: 0.1s;
+}
+
+.origami-gate:checked~.origami-menu>li>.origami-sub>li>.origami-sub>li {
+    transition-delay: 0.2s;
+}

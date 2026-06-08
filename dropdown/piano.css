@@ -1,0 +1,85 @@
+.tavo-piano-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.piano-gate {
+    display: none;
+}
+
+.piano-btn {
+    background: #222;
+    color: white;
+    padding: 12px 24px;
+    cursor: pointer;
+    border: 2px solid #444;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 15px;
+    margin: 2px 40px;
+}
+
+.piano-keys {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    perspective: 1000px;
+}
+
+.key {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: calc(var(--i) * 0.05s);
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.key.white {
+    width: 45px;
+    height: 160px;
+    background: linear-gradient(to bottom, #eee 0%, #fff 100%);
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+.key.black {
+    width: 30px;
+    height: 100px;
+    background: linear-gradient(to bottom, #444 0%, #000 100%);
+    z-index: 2;
+    margin-left: -15px;
+    margin-right: -15px;
+    color: white;
+    border-radius: 0 0 3px 3px;
+}
+
+.key span {
+    font-size: 10px;
+    font-family: monospace;
+    pointer-events: none;
+}
+
+.piano-gate:checked~.piano-keys .key {
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
+.key:hover {
+    filter: brightness(0.9);
+    height: 165px;
+}
+
+.key.black:hover {
+    height: 105px;
+}
