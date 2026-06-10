@@ -5,23 +5,21 @@
     --holo-border: #005f73;
 }
 
-.tavo-holo-container {
+.holo-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 60px;
     background: #050505;
-    /* Fondo oscuro absoluto para resaltar el neón */
 }
 
-.tavo-holo-card {
+.holo-card {
     position: relative;
     width: 320px;
     height: 420px;
     background: var(--holo-bg);
     border: 1px solid var(--holo-border);
     border-radius: 4px;
-    /* Esquinas semirígidas estilo militar/industrial */
     overflow: hidden;
     box-shadow:
         0 0 15px rgba(0, 95, 115, 0.2),
@@ -30,7 +28,6 @@
     cursor: pointer;
 }
 
-/* Efecto 1: Las Scanlines (Líneas de monitor viejo) */
 .holo-scanlines {
     position: absolute;
     top: 0;
@@ -46,7 +43,6 @@
     z-index: 3;
 }
 
-/* Efecto 2: El haz de luz de escaneo infinito */
 .holo-scanner {
     position: absolute;
     top: -100%;
@@ -74,7 +70,6 @@
     }
 }
 
-/* Contenedor del contenido */
 .holo-content {
     position: relative;
     height: 100%;
@@ -85,7 +80,6 @@
     z-index: 4;
 }
 
-/* Texto estilo glitch/consola */
 .holo-glitch-text {
     font-family: 'Courier New', Courier, monospace;
     color: var(--holo-cyan);
@@ -114,7 +108,6 @@
     flex-grow: 1;
 }
 
-/* Decoraciones estéticas de esquina inferior */
 .holo-footer {
     display: flex;
     justify-content: space-between;
@@ -137,11 +130,7 @@
     border-bottom: 2px solid var(--holo-cyan);
 }
 
-/* =======================================================
-   ESTADOS HOVER (Interferencia cuántica / Sobrecarga)
-   ======================================================= */
-
-.tavo-holo-card:hover {
+.holo-card:hover {
     border-color: var(--holo-cyan);
     background: rgba(0, 240, 255, 0.02);
     transform: translateY(-5px);
@@ -150,14 +139,12 @@
         inset 0 0 30px rgba(0, 240, 255, 0.1);
 }
 
-/* El escáner acelera de forma errática al pasar el mouse */
-.tavo-holo-card:hover .holo-scanner {
+.holo-card:hover .holo-scanner {
     animation: holo-scan 1s linear infinite;
     opacity: 1;
 }
 
-/* Ligera distorsión del fondo en hover */
-.tavo-holo-card:hover .holo-scanlines {
+.holo-card:hover .holo-scanlines {
     background: repeating-linear-gradient(to bottom,
             rgba(0, 0, 0, 0) 0px,
             rgba(0, 0, 0, 0) 1px,

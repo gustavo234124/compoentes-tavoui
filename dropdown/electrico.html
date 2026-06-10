@@ -1,33 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="glitch-dropdown">
+    <input type="checkbox" id="glitch-switch" class="glitch-gate">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="electrico.css">
-</head>
+    <label for="glitch-switch" class="glitch-trigger" data-text="ACCESS_PROTOCOL">
+        ACCESS_PROTOCOL
+    </label>
 
-<body>
-    <div class="glitch-dropdown">
-        <input type="checkbox" id="glitch-switch" class="glitch-gate">
-
-        <label for="glitch-switch" class="glitch-trigger" data-text="ACCESS_PROTOCOL">
-            ACCESS_PROTOCOL
-        </label>
-
-        <ul class="glitch-menu">
-            <li style="--i:1">
-                <a href="#" class="glitch-item" data-text="SYSTEM_STATUS">SYSTEM_STATUS</a>
-            </li>
-            <li style="--i:2">
-                <a href="#" class="glitch-item" data-text="NETWORK_DECRYPT">NETWORK_DECRYPT</a>
-            </li>
-            <li style="--i:3">
-                <a href="#" class="glitch-item" data-text="TERMINATE_SESSION">TERMINATE_SESSION</a>
-            </li>
-        </ul>
-    </div>
-</body>
-
-</html>
+    <ul class="glitch-menu">
+        <li style="--i:1">
+            <a href="#" class="glitch-item" data-text="SYSTEM_STATUS">SYSTEM_STATUS</a>
+        </li>
+        <li style="--i:2">
+            <a href="#" class="glitch-item" data-text="NETWORK_DECRYPT">NETWORK_DECRYPT</a>
+        </li>
+        <li style="--i:3">
+            <a href="#" class="glitch-item" data-text="TERMINATE_SESSION">TERMINATE_SESSION</a>
+        </li>
+    </ul>
+</div>
