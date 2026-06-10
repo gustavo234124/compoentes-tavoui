@@ -81,7 +81,6 @@
     margin-bottom: 20px;
 }
 
-/* Fila de Precio y Botón */
 .price-row {
     display: flex;
     justify-content: space-between;
