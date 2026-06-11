@@ -1,42 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<button class="btn-trigger" id="open-modal-btn">Ver Perfil</button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="uno.css">
-</head>
+<dialog class="modal-blur" id="custom-modal">
+    <div class="modal-wrapper">
 
-<body>
-    <!-- Botón que dispara el modal -->
-    <button class="btn-trigger" id="open-modal-btn">Ver Perfil</button>
-
-    <!-- Estructura nativa del Modal sin prefijos -->
-    <dialog class="modal-blur" id="custom-modal">
-        <div class="modal-wrapper">
-
-            <!-- Encabezado -->
-            <div class="modal-header">
-                <h3 class="modal-title">Lorem, ipsum.</h3>
-                <button class="modal-close-btn" id="close-modal-btn" aria-label="Cerrar">&times;</button>
-            </div>
-
-            <!-- Cuerpo -->
-            <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-            </div>
-
-            <!-- Pie de página / Acciones -->
-            <div class="modal-footer">
-                <button class="modal-btn btn-secondary" id="cancel-modal-btn">Cancelar</button>
-                <button class="modal-btn btn-primary">Guardar Cambios</button>
-            </div>
-
+        <div class="modal-header">
+            <h3 class="modal-title">Lorem, ipsum.</h3>
+            <button class="modal-close-btn" id="close-modal-btn" aria-label="Cerrar">&times;</button>
         </div>
-    </dialog>
-    <script src="uno.js"></script>
-</body>
 
-</html>
+        <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua.</p>
+        </div>
+
+        <div class="modal-footer">
+            <button class="modal-btn btn-secondary" id="cancel-modal-btn">Cancelar</button>
+            <button class="modal-btn btn-primary">Guardar Cambios</button>
+        </div>
+
+    </div>
+</dialog>

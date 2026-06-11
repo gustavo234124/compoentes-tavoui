@@ -6,7 +6,6 @@
     --accent-blue: #2563eb;
 }
 
-/* Botón disparador genérico */
 .btn-trigger {
     padding: 12px 24px;
     background: var(--accent-blue);
@@ -23,10 +22,6 @@
     opacity: 0.9;
 }
 
-/* =======================================================
-   ESTILOS DEL MODAL (ELEMENTO DIALOG)
-   ======================================================= */
-
 .modal-blur {
     padding: 0;
     border: none;
@@ -37,7 +32,6 @@
     overflow: visible;
 }
 
-/* El Wrapper maneja el Glassmorphism y la animación elástica */
 .modal-wrapper {
     background: var(--modal-bg);
     backdrop-filter: blur(16px);
@@ -48,19 +42,16 @@
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     font-family: system-ui, sans-serif;
 
-    /* ESTADO INICIAL PARA LA ANIMACIÓN (Encogido) */
     transform: scale(0.7);
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
 }
 
-/* CUANDO EL DIALOG SE ABRE: Animamos el wrapper hacia su escala real */
 .modal-blur[open] .modal-wrapper {
     transform: scale(1);
     opacity: 1;
 }
 
-/* EL BACKDROP (Fondo oscuro difuminado nativo) */
 .modal-blur::backdrop {
     background: rgba(15, 23, 42, 0.4);
     backdrop-filter: blur(8px);
@@ -69,14 +60,9 @@
     transition: opacity 0.3s ease;
 }
 
-/* Animación de entrada para el backdrop */
 .modal-blur[open]::backdrop {
     opacity: 1;
 }
-
-/* =======================================================
-   COMPONENTES INTERNOS DEL MODAL
-   ======================================================= */
 
 .modal-header {
     display: flex;
@@ -122,7 +108,6 @@
     gap: 12px;
 }
 
-/* Botones de acción */
 .modal-btn {
     padding: 10px 18px;
     border-radius: 8px;
