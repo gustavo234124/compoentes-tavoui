@@ -1,0 +1,138 @@
+:root {
+    --modal-bg: rgba(255, 255, 255, 0.85);
+    --modal-border: rgba(255, 255, 255, 0.4);
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --accent-blue: #2563eb;
+}
+
+.btn-trigger {
+    padding: 12px 24px;
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+    transition: opacity 0.2s;
+}
+
+.btn-trigger:hover {
+    opacity: 0.9;
+}
+
+.modal-blur {
+    padding: 0;
+    border: none;
+    background: transparent;
+    max-width: 450px;
+    width: 90%;
+    border-radius: 16px;
+    overflow: visible;
+}
+
+.modal-wrapper {
+    background: var(--modal-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--modal-border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    font-family: system-ui, sans-serif;
+
+    transform: scale(0.7);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+
+.modal-blur[open] .modal-wrapper {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-blur::backdrop {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-blur[open]::backdrop {
+    opacity: 1;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.modal-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+    color: var(--text-dark);
+}
+
+.modal-body {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.modal-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: var(--text-muted);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.btn-primary {
+    background: var(--accent-blue);
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    opacity: 0.95;
+}

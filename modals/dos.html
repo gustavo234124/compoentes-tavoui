@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dos.css">
+</head>
+
+<body>
+    <button class="btn-drawer-trigger" id="open-drawer-btn">Abrir panel</button>
+
+    <dialog class="modal-drawer" id="drawer-modal">
+        <div class="drawer-wrapper">
+
+            <div class="drawer-header">
+                <h3 class="drawer-title">Panel de Control</h3>
+                <button class="drawer-close-btn" id="close-drawer-btn" aria-label="Cerrar">&times;</button>
+            </div>
+
+            <div class="drawer-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+
+            <div class="drawer-footer">
+                <button class="drawer-btn btn-secondary" id="cancel-drawer-btn">Cerrar</button>
+                <button class="drawer-btn btn-primary">Aplicar</button>
+            </div>
+
+        </div>
+    </dialog>
+    <script src="dos.js"></script>
+</body>
+
+</html>
