@@ -35,7 +35,6 @@ body {
     color: var(--bg-dark);
 }
 
-/* ESTRUCTURA RETRO / ESTÁTICA DEL MODAL */
 .modal-vintage {
     padding: 0;
     border: none;
@@ -56,7 +55,6 @@ body {
     background: rgba(10, 10, 12, 0.85);
 }
 
-/* LAYOUT 50 / 50 SIN FILTROS COMPLEJOS */
 .split-layout-inner {
     display: flex;
     width: 100%;
