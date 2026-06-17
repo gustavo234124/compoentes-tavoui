@@ -1,0 +1,59 @@
+:root {
+    --border-color: #3a3a40;
+    --bg-off-red: #ff3b30;
+    --bg-on-green: #34c759;
+    --bg-track-dark: #1a1a1e;
+}
+
+.text-flip-switch {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+}
+
+.matrix-track {
+    position: relative;
+    width: 120px;
+    height: 36px;
+    background: var(--bg-track-dark);
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.state-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 14px;
+    color: #ffffff;
+    user-select: none;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.matrix-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 54px;
+    height: 28px;
+    background: var(--bg-off-red);
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    transition: transform 0.25s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.25s ease;
+    will-change: transform, background-color;
+    z-index: 2;
+    border-radius: 11px;
+}
+
+.text-flip-switch.active .matrix-thumb {
+    background: var(--bg-on-green);
+    transform: translateX(62px);
+}
